@@ -10,7 +10,7 @@ export default function App() {
     <ThemeProvider theme={defaultTheme}>
       <Container>
         <Text size={30} color="alert">
-          Oi Leticia to criando um app!
+          Running Text Component!
         </Text>
         <Spacer height={20} />
         <Text size={30} color="onSecondary">
