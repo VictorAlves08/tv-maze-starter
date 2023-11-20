@@ -6,6 +6,7 @@ import Spacer from "./src/common/components/Spacer";
 import Container from "./src/common/components/Container";
 import Content from "./src/common/components/Content";
 import Icon from "./src/common/components/Icon";
+import Avatar from "./src/common/components/Avatar";
 
 export default function App() {
   return (
@@ -16,11 +17,9 @@ export default function App() {
             Running Text Component 1!
           </Text>
           <Spacer height={20} />
-          <Text size={30} color="onSecondary">
-            Running Text Component 2!
-          </Text>
-          <Spacer height={20} />
           <Icon icon="home" size={40} color="#fff" />
+          <Spacer height={20} />
+          <Avatar size="large" url="https://i.pravatar.cc/300" />
         </Content>
       </Container>
     </ThemeProvider>
