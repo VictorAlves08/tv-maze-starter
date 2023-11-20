@@ -9,6 +9,7 @@ import Icon from "./src/common/components/Icon";
 import BackButton from "./src/common/components/BackButton";
 import Avatar from "./src/common/components/Avatar";
 import NotFound from "./src/common/components/NotFound";
+import Input from "./src/common/components/Input";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Text size={30} color="alert">
             Running Text Component 1!
           </Text>
+          <Input />
           <Spacer height={20} />
           <Icon icon="home" size={40} color="#fff" />
           <Spacer height={20} />
