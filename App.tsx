@@ -6,6 +6,7 @@ import Spacer from "./src/common/components/Spacer";
 import Container from "./src/common/components/Container";
 import Content from "./src/common/components/Content";
 import Icon from "./src/common/components/Icon";
+import BackButton from "./src/common/components/BackButton";
 import Avatar from "./src/common/components/Avatar";
 
 export default function App() {
@@ -13,6 +14,11 @@ export default function App() {
     <ThemeProvider theme={defaultTheme}>
       <Container>
         <Content>
+          <BackButton
+            onPress={() => {
+              console.log("Clicked!");
+            }}
+          />
           <Text size={30} color="alert">
             Running Text Component 1!
           </Text>
