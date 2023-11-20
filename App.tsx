@@ -1,5 +1,6 @@
 import { ThemeProvider } from "styled-components/native";
 import { defaultTheme } from "./src/common/constants/styles/theme/defaultTheme";
+import { View } from "react-native";
 
 import Text from "./src/common/components/Text/index";
 import Spacer from "./src/common/components/Spacer";
@@ -10,6 +11,7 @@ import BackButton from "./src/common/components/BackButton";
 import Avatar from "./src/common/components/Avatar";
 import NotFound from "./src/common/components/NotFound";
 import Input from "./src/common/components/Input";
+import ShowCover from "./src/common/components/ShowCover";
 
 export default function App() {
   return (
@@ -25,12 +27,23 @@ export default function App() {
             Running Text Component 1!
           </Text>
           <Input />
-          <Spacer height={20} />
           <Icon icon="home" size={40} color="#fff" />
-          <Spacer height={20} />
           <Avatar size="large" url="https://i.pravatar.cc/300" />
-          <Spacer height={20} />
           <NotFound />
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <ShowCover
+              onPress={() => { }}
+              url="https://static.tvmaze.com/uploads/images/medium_portrait/1/4600.jpg"
+              title="The Flash"
+            />
+            <ShowCover
+              onPress={() => { }}
+              url="https://static.tvmaze.com/uploads/images/medium_portrait/1/4600.jpg"
+              title="The Flash"
+            />
+          </View>
         </Content>
       </Container>
     </ThemeProvider>
