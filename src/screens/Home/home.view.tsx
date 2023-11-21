@@ -12,10 +12,12 @@ import ShowCover from "../../common/components/ShowCover";
 import Spacer from "../../common/components/Spacer";
 import { flatListStyleSheet } from "../../common/utils/flatlist";
 import useHomeController from "./home.controller";
+import useMyNavigation from "../../common/hooks/useMyNavigation";
 
 import { Logo } from "./styles";
 
 const Home = () => {
+    const { navigate } = useMyNavigation();
     const { colors, spacing } = useTheme();
     const { loading, shows, currentPage, isRefreshing, loadShows } = useHomeController();
 
@@ -38,7 +40,7 @@ const Home = () => {
                             url={item.image?.medium}
                             title={item.name}
                             onPress={() => {
-                                //navegar para a tela de detalhes
+                                navigate("Details", { show: item });
                             }}
                         />
                     )}

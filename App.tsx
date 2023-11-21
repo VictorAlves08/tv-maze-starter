@@ -3,13 +3,13 @@ import { ThemeProvider } from "styled-components/native";
 
 import { defaultTheme } from "./src/common/constants/styles/theme/defaultTheme";
 
-import BottomTabNavigator from "./src/navigation/BottomTabNavigator/index";
+import Routes from "./src/navigation/index";
 
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <NavigationContainer>
-        <BottomTabNavigator />
+      <Routes />
       </NavigationContainer>
     </ThemeProvider>
   );
