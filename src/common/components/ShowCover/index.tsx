@@ -54,6 +54,7 @@ const ShowCover = ({ onPress, title, url }: ShowCoverProps) => {
                         <Text numberOfLines={1} color="caption">
                             {title}
                         </Text>
+                        <Spacer height={spacing.lg} />
                     </>
                 )}
             </Container>
