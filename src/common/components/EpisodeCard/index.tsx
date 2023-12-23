@@ -55,7 +55,7 @@ const EpisodeCard = ({ episode, onPress }: EpisodeCardProps) => {
             {shouldShowDetails && (
                 <View>
                     <Spacer height={spacing.sm} />
-                    <Text color="caption">{summaryWithoutHtml}</Text>
+                    <Text style={{ textAlign: 'justify' }} color="caption">{summaryWithoutHtml}</Text>
                 </View>
             )}
         </Container>

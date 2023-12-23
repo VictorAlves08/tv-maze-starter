@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 import Text from "../Text";
 
 export const Container = styled.View`
-
+  margin-bottom: ${({ theme }) => theme.spacing.md}px;
 `;
 
 export const RowEpisode = styled.Pressable`
