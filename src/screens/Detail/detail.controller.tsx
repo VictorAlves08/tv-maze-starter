@@ -1,4 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
+import useFavoritesShows from "../../common/hooks/useFavoritesShows";
 import { format } from "date-fns";
 import { EpisodeModel } from "../../common/models/episode.model";
 import { SeasonModel } from "../../common/models/season.model";
@@ -16,6 +17,11 @@ const useDetailController = ({ show }: UseDetailController) => {
     const [seasons, setSeasons] = useState<Array<SeasonModel>>([]);
     const [selectedSeason, setSelectedSeason] = useState<SeasonModel>();
     const [episodes, setEpisodes] = useState<EpisodeModel[]>([]);
+
+    /**
+     * Contexts
+     */
+    const { addFavoriteShow, favoritesShows, removeFavoriteShow } = useFavoritesShows();
 
     /**
      * Memos
@@ -89,6 +95,9 @@ const useDetailController = ({ show }: UseDetailController) => {
         seasons,
         selectedSeason,
         episodes,
+        addFavoriteShow,
+        favoritesShows,
+        removeFavoriteShow,
     };
 };
 
